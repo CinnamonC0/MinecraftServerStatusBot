@@ -18,3 +18,6 @@ multidict==6.0.4 \
 python-dotenv==1.0.0 \
 yarl==1.9.2 \
 
+# Notes
+
+Ini hanyalah project kecil kecialan saja kalau ada salah mohon di maklumi
