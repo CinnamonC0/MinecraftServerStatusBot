@@ -43,6 +43,6 @@ async def ob(interaction):
 
 @bot.tree.command(name="help",description="Bantuan Command")
 async def help(interaction):
-    await interaction.response.send_message("Berikut Command yang dapat digunakan:\n\n/ob - Untuk melihat status NAMA_SERVER1\n\n/sv - Untuk melihat status NAMA_SERVER2\n\n Made by _xylium")
+    await interaction.response.send_message("Berikut Command yang dapat digunakan:\n\n/server1 - Untuk melihat status NAMA_SERVER1\n\n/server2 - Untuk melihat status NAMA_SERVER2\n\n Made by _xylium")
 
 bot.run(token)
