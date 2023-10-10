@@ -21,28 +21,28 @@ async def on_ready():
     except Exception as e:
         print(e)
 
-@bot.tree.command(name="ob",description="Cek Status Server OneBlock")
+@bot.tree.command(name="server1",description="Cek Status NAMA_SERVER1")
 async def ob(interaction):
         await interaction.response.defer()
-        server = JavaServer.lookup("ob.smakensa.my.id")
+        server = JavaServer.lookup("IP_SERVER1")
         try:
             status = server.status()
-            await interaction.followup.send(f"Server OneBlock sedang Online 🟢 Dengan {status.players.online} pemain; {', '.join([player.name for player in status.players.sample])}")
+            await interaction.followup.send(f"Server NAMA_SERVER1 sedang Online 🟢 Dengan {status.players.online} pemain; {', '.join([player.name for player in status.players.sample])}")
         except Exception as e:
-            await interaction.followup.send("Server OneBlock sedang Offline 🔴")
+            await interaction.followup.send("Server NAMA_SERVER1 sedang Offline 🔴")
 
-@bot.tree.command(name="sv",description="Cek Status Server Survival")
+@bot.tree.command(name="server2",description="Cek Status NAMA_SERVER2")
 async def ob(interaction):
         await interaction.response.defer()
-        server = JavaServer.lookup("survival.smakensa.my.id")
+        server = JavaServer.lookup("IP_SERVER2")
         try:
             status = server.status()
-            await interaction.followup.send(f"Server Survival sedang Online 🟢 Dengan {status.players.online} pemain; {', '.join([player.name for player in status.players.sample])}")
+            await interaction.followup.send(f"Server NAMA_SERVER2 sedang Online 🟢 Dengan {status.players.online} pemain; {', '.join([player.name for player in status.players.sample])}")
         except TimeoutError:
-            await interaction.followup.send("Server Survival sedang Offline 🔴")
+            await interaction.followup.send("Server NAMA_SERVER2 sedang Offline 🔴")
 
 @bot.tree.command(name="help",description="Bantuan Command")
 async def help(interaction):
-    await interaction.response.send_message("Berikut Command yang dapat digunakan:\n\n/ob - Untuk melihat status server OneBlock\n\n/sv - Untuk melihat status server Survival\n\n Made by _xylium")
+    await interaction.response.send_message("Berikut Command yang dapat digunakan:\n\n/ob - Untuk melihat status NAMA_SERVER1\n\n/sv - Untuk melihat status NAMA_SERVER2\n\n Made by _xylium")
 
 bot.run(token)
